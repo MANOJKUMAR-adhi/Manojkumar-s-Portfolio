@@ -1328,28 +1328,26 @@ section {
 
 /* Chat Box Styling */
 .chat-box {
-    position: fixed;
-    top: 100px;
-    right: 30px;
+    position: absolute;
+    top: 70px; /* Position below the AI icon */
+    right: 0;
     width: 300px;
-    background: linear-gradient(145deg, #2C2C2C, #1A1A1A);
+    background: rgba(15, 15, 15, 0.95);
     border-radius: 15px;
-    border: 1px solid rgba(255, 0, 0, 0.2);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    display: none;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.15);
+    overflow: hidden;
     opacity: 0;
-    transform: translateY(20px) scale(0.95);
-    transform-origin: top right;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 999;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 0, 0.1);
 }
 
 .chat-box.active {
-    display: flex;
-    flex-direction: column;
     opacity: 1;
-    transform: translateY(0) scale(1);
-    animation: chatBoxOpen 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 .chat-header {
