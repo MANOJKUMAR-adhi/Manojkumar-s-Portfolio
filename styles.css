@@ -38,7 +38,7 @@ body {
 
 /* Navigation and Logo Fixes */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -2048,7 +2048,7 @@ section {
 
 /* Label Container Adjustments */
 .chat-bot-container {
-    position: fixed;
+    position: sticky;
     top: 80px; /* Position below the navbar */
     right: 20px;
     z-index: 999;
